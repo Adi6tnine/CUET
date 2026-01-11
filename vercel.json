@@ -2,11 +2,6 @@
   "buildCommand": "npm run build:memory-safe",
   "outputDirectory": "dist",
   "framework": "vite",
-  "functions": {
-    "app/api/**/*.js": {
-      "memory": 1024
-    }
-  },
   "build": {
     "env": {
       "NODE_OPTIONS": "--max-old-space-size=4096"
@@ -20,7 +15,7 @@
   ],
   "headers": [
     {
-      "source": "/static/(.*)",
+      "source": "/assets/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
