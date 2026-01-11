@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-cyber-border;
+  }
+  body {
+    @apply bg-cyber-bg text-cyber-text font-sans;
+    background-image: 
+      radial-gradient(circle at 25% 25%, #22c55e20 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, #a855f720 0%, transparent 50%);
+  }
+}
+
+@layer components {
+  .cyber-card {
+    @apply bg-cyber-card border border-cyber-border rounded-lg backdrop-blur-sm;
+  }
+  
+  .cyber-button {
+    @apply bg-cyber-green text-black font-semibold px-4 py-2 rounded-md hover:bg-cyber-green/80 transition-all duration-200;
+  }
+  
+  .cyber-input {
+    @apply bg-cyber-card border border-cyber-border rounded-md px-3 py-2 text-cyber-text placeholder-gray-500 focus:border-cyber-green focus:outline-none;
+  }
+  
+  .glow-green {
+    box-shadow: 0 0 10px #22c55e40, 0 0 20px #22c55e20;
+  }
+  
+  .glow-purple {
+    box-shadow: 0 0 10px #a855f740, 0 0 20px #a855f720;
+  }
+  
+  .priority-border {
+    @apply border-2 border-cyber-green animate-pulse-glow;
+  }
+}
