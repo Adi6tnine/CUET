@@ -1,0 +1,22 @@
+{
+  "name": "AVION",
+  "short_name": "AVION",
+  "description": "Elevate your rank with AI-powered CUET exam preparation",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111827",
+  "theme_color": "#6366f1",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgdmlld0JveD0iMCAwIDEyOCAxMjgiIGZpbGw9IiM2MzY2ZjEiPjxyZWN0IHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiByeD0iMjQiIGZpbGw9IiM2MzY2ZjEiLz48cGF0aCBkPSJNMzIgNjRMOTYgMzJMODAgNjRMMTEyIDcyTDk2IDc2TDgwIDk2TDY0IDc2TDMyIDY0WiIgZmlsbD0id2hpdGUiLz48L3N2Zz4=",
+      "sizes": "128x128",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIGZpbGw9IiM2MzY2ZjEiPjxyZWN0IHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiByeD0iOTYiIGZpbGw9IiM2MzY2ZjEiLz48cGF0aCBkPSJNMTI4IDI1NkwzODQgMTI4TDMyMCAyNTZMNDQ4IDI4OEwzODQgMzA0TDMyMCAzODRMMjU2IDMwNEwxMjggMjU2WiIgZmlsbD0id2hpdGUiLz48L3N2Zz4=",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}

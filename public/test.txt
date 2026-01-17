@@ -1,0 +1,1 @@
+Test file to check if public folder is working

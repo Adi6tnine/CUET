@@ -1,0 +1,22 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[build.environment]
+  VITE_APP_NAME = "AVION"
+  VITE_APP_VERSION = "2.0.0"
+  VITE_PRIMARY_AI_PROVIDER = "groq"
+  VITE_AI_MODEL = "llama-3.3-70b-versatile"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[context.production.environment]
+  VITE_DEV_MODE = "false"
+  VITE_LOG_LEVEL = "error"
+
+[context.deploy-preview.environment]
+  VITE_DEV_MODE = "true"
+  VITE_LOG_LEVEL = "info"

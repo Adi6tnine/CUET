@@ -1,0 +1,37 @@
+{
+  "version": 2,
+  "name": "cuet-ai-ultimate",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "env": {
+    "VITE_APP_NAME": "AVION",
+    "VITE_APP_VERSION": "2.0.0",
+    "VITE_PRIMARY_AI_PROVIDER": "groq",
+    "VITE_AI_MODEL": "llama-3.3-70b-versatile"
+  },
+  "build": {
+    "env": {
+      "VITE_GROQ_API_KEY": "@groq_api_key",
+      "VITE_JSONBIN_API_KEY": "@jsonbin_api_key",
+      "VITE_JSONBIN_BIN_ID": "@jsonbin_bin_id"
+    }
+  },
+  "functions": {
+    "app/api/**/*.js": {
+      "runtime": "nodejs18.x"
+    }
+  }
+}
