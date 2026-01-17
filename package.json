@@ -9,11 +9,12 @@
     "build:production": "node scripts/build-production.js",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "deploy:vercel": "npm run build:production && vercel --prod",
-    "deploy:netlify": "npm run build:production && netlify deploy --prod --dir=dist",
+    "deploy:vercel": "vercel --prod",
+    "deploy:netlify": "npm run build && netlify deploy --prod --dir=dist",
     "serve": "vite preview --port 3000",
     "analyze": "npm run build && npx vite-bundle-analyzer dist/stats.html",
-    "health-check": "node -e \"console.log('AVION Health Check: OK')\""
+    "health-check": "node -e \"console.log('AVION Health Check: OK')\"",
+    "vercel-build": "npm run build"
   },
   "dependencies": {
     "react": "^18.2.0",
