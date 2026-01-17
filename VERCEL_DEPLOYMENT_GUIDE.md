@@ -15,13 +15,39 @@ npm i -g vercel
 vercel --prod
 ```
 
+## 🔧 Vercel Configuration Fixed
+
+### ❌ **Common Vercel Errors Fixed:**
+1. ~~`functions` property cannot be used with `builds`~~ ✅ Fixed
+2. ~~`routes` cannot be used with `headers`~~ ✅ Fixed
+
+### ✅ **Current Configuration:**
+- Uses `rewrites` instead of `routes` for SPA routing
+- Includes security headers for production
+- Service worker support configured
+- Modern Vercel v2 format
+
+### 🔄 **If You Still Get Errors:**
+Replace `vercel.json` with the minimal version:
+
+```bash
+# Rename current config
+mv vercel.json vercel-full.json
+
+# Use minimal config
+mv vercel-minimal.json vercel.json
+
+# Deploy
+vercel --prod
+```
+
 ## 🔧 Environment Variables Setup
 
 After deployment, add these environment variables in Vercel dashboard:
 
 ### Required Variables:
 ```bash
-VITE_GROQ_API_KEY=your_groq_api_key_here
+VITE_GROQ_API_KEY=gsk_your_actual_groq_api_key_here
 ```
 
 ### Optional Variables (for cloud features):
@@ -35,10 +61,14 @@ VITE_JSONBIN_BIN_ID=your_jsonbin_bin_id_here
 2. Click **Settings** → **Environment Variables**
 3. Add each variable:
    - **Name**: `VITE_GROQ_API_KEY`
-   - **Value**: Your actual API key
-   - **Environment**: Production (and Preview if needed)
+   - **Value**: Your actual API key (starts with `gsk_`)
+   - **Environment**: Production ✅ (and Preview if needed)
 4. Click **Save**
 5. **Redeploy** your project for changes to take effect
+
+### Get Your API Keys:
+- **GroqCloud**: [console.groq.com/keys](https://console.groq.com/keys) (Required)
+- **JSONBin**: [jsonbin.io](https://jsonbin.io) → API Keys (Optional)
 
 ## 📋 Pre-Deployment Checklist
 
